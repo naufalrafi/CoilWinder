@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COIL WINDER</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to PiWind<%= title %></p>
+    <div class="PositionDisplay">
+      <p>Current Winder X position:
+        <div id="xPositionMotor0"></div>
+    </div>
+
+    <div class="Commands">
+      <p>Set the home position first</p>
+      <div colour="green" id="homeStatus"></div>
+      <button type='button' value="Set Home Position">Set Home Position</button>
+      <button type='button' value='Go to Home Position'>Go to home position</button>
+      <br>
+      <br>
+      <button type='button' value='Go to this position'>Go to position: </button>
+      <input type='text' name='xPositionReq' value='Enter Position'></input>
+
+    </div>
+
+  </body>
+</html>
