@@ -4,6 +4,29 @@
     <title>COIL WINDER</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src=/javascripts/coilWinder.js></script>
+
+    <script>
+    $(document).ready(function() {
+      $('#homeForm').submit(function(event) {
+          event.preventDefault();
+          //jQuery post
+          $.get("/api/home", {})
+            .done(function(data) {
+              alert(data);
+            })
+            .fail(function(err) {
+              // $('#error').text(err.responseText);
+              // setTimeout(clearError, 2000);
+              // function clearError(){
+              //   $('#error').text('')
+              }
+            );
+      });
+    });
+    </script>
+
+
   </head>
   <body>
     <h1><%= title %></h1>
@@ -24,6 +47,12 @@
       <input type='text' name='xPositionReq' value='Enter Position'></input>
 
     </div>
+
+    <form id="homeForm">
+      going home
+      <input type="Submit" value="goHome">
+
+    </form>
 
   </body>
 </html>
