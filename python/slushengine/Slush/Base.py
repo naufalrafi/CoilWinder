@@ -18,7 +18,7 @@ try:
   from quick2wire.parts.mcp23x17 import In, Out
   from quick2wire.i2c import I2CMaster, writing_bytes, reading
   from contextlib import closing
-except ImportError:	
+except ImportError:
   raise ImportError("Cannot load i2c library (quick2wire)")
 
 #include the gpio drivers
@@ -26,4 +26,3 @@ try:
   import RPi.GPIO as gpio
 except ImportError:
   raise ImportError("Cannot load the Raspberry Pi GPIO drivers")
-
